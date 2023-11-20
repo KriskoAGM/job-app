@@ -38,21 +38,16 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/experts">
-                                    Freelancers
+                                <Link className="nav-link" to="/login">
+                                    <i className="fa fa-user" aria-hidden="true" />
+                                    <span>Login</span>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    <i className="fa fa-user" aria-hidden="true" />
-                                    <span>Login</span>
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">
+                                <Link className="nav-link" to="/register">
                                     <i className="fa fa-user" aria-hidden="true" />
                                     <span>Sign Up</span>
-                                </a>
+                                </Link>
                             </li>
                             <form className="form-inline">
                                 <button className="btn   nav_search-btn" type="submit">

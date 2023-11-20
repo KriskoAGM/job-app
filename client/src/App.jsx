@@ -1,39 +1,32 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Header from './components/Header'
-import About from './components/About'
-import Jobs from './components/Jobs'
-import JobsPage from './components/JobsPage'
-import Experts from './components/Experts'
-import ExpertsPage from './components/ExpertsPage'
-import Info from './components/Info'
-import Footer from './components/Footer'
+import Header from './components/header/Header'
+import Login from './components/login/Login'
+import Register from './components/register/Register'
+import About from './components/about/About'
+import Jobs from './components/jobs/Jobs'
+import JobsPage from './components/jobs/JobsPage'
+import Info from './components/info/Info'
+import Footer from './components/footer/Footer'
 
 function App() {
 
   return (
     <div>
 
-      <Header/>
+      <Header />
 
       <Routes>
-      <Route
-          path="/"
-          element={
-            <>
-              <Jobs />
-              <Experts />
-            </>
-          }
-        />
-        <Route path="/about" element={<About />}/>
-        <Route path="/jobs" element={<JobsPage />}/>
-        <Route path="/experts" element={<ExpertsPage />}/>
+        <Route path="/" element={<Jobs />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/jobs" element={<JobsPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
-      
+
       <Info />
-      <Footer/>
-      
+      <Footer />
+
     </div>
   )
 }
