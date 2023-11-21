@@ -1,0 +1,18 @@
+{
+    "cc487cce-a730-4b8b-baa7-2ab95e80551b": {
+        "title": "Web developer",
+        "location": "Bulgaria",
+        "salary": "1500",
+        "companyLogo": "https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg",
+        "description": "react developer",
+        "_id": "cc487cce-a730-4b8b-baa7-2ab95e80551b"
+    },
+    "d4c80986-78ca-4782-bf65-06cca44fba02": {
+        "title": "Junio back-end developer",
+        "location": "Bulgaria, Sofia",
+        "salary": "2000",
+        "companyLogo": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398",
+        "description": "Some description",
+        "_id": "d4c80986-78ca-4782-bf65-06cca44fba02"
+    }
+}
