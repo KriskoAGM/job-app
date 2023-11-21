@@ -8,6 +8,7 @@ import Jobs from './components/jobs/Jobs'
 import JobsPage from './components/jobs/JobsPage'
 import Info from './components/info/Info'
 import Footer from './components/footer/Footer'
+import CreateJob from './components/jobs/CreateJob'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/jobs" element={<JobsPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/create" element={<CreateJob />} />
       </Routes>
 
       <Info />
