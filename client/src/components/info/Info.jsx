@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Info = () => {
     return (
         <section className="info_section ">
@@ -9,24 +11,19 @@ const Info = () => {
                         </h4>
                         <ul>
                             <li className="active">
-                                <a href="index.html">
+                                <Link to="/">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="about.html">
+                                <Link to="/about">
                                     About
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a className="" href="job.html">
+                                <Link className="" to="/jobs">
                                     Jobs
-                                </a>
-                            </li>
-                            <li>
-                                <a className="" href="freelancer.html">
-                                    Freelancers
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
