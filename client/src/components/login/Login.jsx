@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import styles from "../../styles/LoginRegister.module.css";
+import styles from "../../styles/Forms.module.css";
 
 const Login = () => {
     return (

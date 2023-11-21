@@ -1,4 +1,4 @@
-import styles from "../../styles/LoginRegister.module.css";
+import styles from "../../styles/Forms.module.css";
 
 const CreateJob = () => {
     return (
