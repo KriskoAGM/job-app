@@ -49,11 +49,6 @@ const Header = () => {
                                     <span>Sign Up</span>
                                 </Link>
                             </li>
-                            <form className="form-inline">
-                                <button className="btn   nav_search-btn" type="submit">
-                                    <i className="fa fa-search" aria-hidden="true" />
-                                </button>
-                            </form>
                         </ul>
                     </div>
                 </nav>
