@@ -5,12 +5,12 @@ const CreateJob = () => {
         <div className={styles.container}>
             <div className={`${styles.create} ${styles.form}`}>
                 <header>Create</header>
-                <form action="#">
-                    <input type="text" placeholder="Title" />
-                    <input type="text" placeholder="Location" />
-                    <input type="number" placeholder="Salary" />
-                    <input type="text" placeholder="Company Logo" />
-                    <textarea placeholder="Description" />
+                <form >
+                    <input type="text" name="title" placeholder="Title" />
+                    <input type="text" name="location" placeholder="Location" />
+                    <input type="number" name="salary" placeholder="Salary" />
+                    <input type="text" name="companyLogo" placeholder="Company Logo" />
+                    <textarea name="description" placeholder="Description" />
                     <input type="submit" className={styles.button} value="Submit" />
                 </form>
             </div>
