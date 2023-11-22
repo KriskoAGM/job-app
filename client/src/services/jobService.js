@@ -17,7 +17,7 @@ export const create = async (jobData) => {
     };
 };
 
-export const getJobList = async (a) => {
+export const getJobList = async () => {
     try {
         const response = await fetch(baseUrl);
         const result = await response.json();
@@ -25,5 +25,16 @@ export const getJobList = async (a) => {
         return result;
     } catch (err) {
         console.log(err);
+    };
+};
+
+export const getOne = async (jobId) => {
+    try {
+        const response = await fetch(`${baseUrl}${jobId}`)
+        const result = await response.json();
+
+        return result;
+    } catch (err) {
+        console.log(err)
     };
 };
