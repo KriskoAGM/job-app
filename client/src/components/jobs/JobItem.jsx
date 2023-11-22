@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
+
 const JobItem = ({
     _id,
     title,
     location,
     salary,
     companyLogo,
-    description,
 }) => {
 
     return (
@@ -38,9 +39,9 @@ const JobItem = ({
                     <button className="fav-btn">
                         <i className="fa fa-heart-o" aria-hidden="true"></i>
                     </button>
-                    <a href="" className="apply-btn">
+                    <Link to="/details/:id" className="apply-btn">
                         Details
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

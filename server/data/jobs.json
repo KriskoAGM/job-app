@@ -1,18 +1,22 @@
 {
-    "cc487cce-a730-4b8b-baa7-2ab95e80551b": {
-        "title": "Web developer",
-        "location": "Bulgaria",
-        "salary": "1500",
+    "e1f0c459-8caa-415a-8b1f-6562c7531911": {
+        "title": "React Developer",
+        "location": "Vidin, Bulgaria",
+        "salary": "2500",
         "companyLogo": "https://www.mintformations.co.uk/blog/wp-content/uploads/2020/05/shutterstock_583717939.jpg",
-        "description": "react developer",
-        "_id": "cc487cce-a730-4b8b-baa7-2ab95e80551b"
+        "companyDescription": "MobiSystems is a Bulgarian product development company that creates and sells its own productivity applications for Windows, Android, iOS and macOS. Our applications are installed on more than 500 million devices worldwide. During our 22 year history, we have created OfficeSuite, PDF Extra, Translators & Dictionaries and MobiDrive, which have proven themselves to be viable alternatives for the products from Microsoft and Adobe.",
+        "role": " The 10-person web team within MobiSystems is responsible for several different web sites and applications that are critical for the company business. We are looking for experienced front-end web developers with React to join the team and contribute to the many new features that are planned. You will help to re-engineer the MobiSystems web applications, so that they use a modern technology stack and a microservices architecture. You will work in a team with Product Managers, UIUX designers, Back-end engineers, QAs and other Web developers in an agile process and deliver new features for our users on a weekly basis.",
+        "requirements": "M.Sc. or B.Sc. in Informatics, Computer Science, Engineering or equivalent\n5+ years of professional experience with frontend development\nProficiency in JavaScript and TypeScript\n4+ years of professional experience with React",
+        "_id": "e1f0c459-8caa-415a-8b1f-6562c7531911"
     },
-    "d4c80986-78ca-4782-bf65-06cca44fba02": {
-        "title": "Junio back-end developer",
-        "location": "Bulgaria, Sofia",
-        "salary": "2000",
+    "92a2ba54-c7b7-4f13-bf2a-3229da5ebb10": {
+        "title": "Junior back-end developer",
+        "location": "Sofiya, Bulgaria",
+        "salary": "3000",
         "companyLogo": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398",
-        "description": "Some description",
-        "_id": "d4c80986-78ca-4782-bf65-06cca44fba02"
+        "companyDescription": "We are a new company looking for a passionate back end developer",
+        "role": "maintaining our back end servers",
+        "requirements": "1+ year experience in Java\nProfficient in English",
+        "_id": "92a2ba54-c7b7-4f13-bf2a-3229da5ebb10"
     }
 }

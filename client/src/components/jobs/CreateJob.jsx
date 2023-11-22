@@ -26,7 +26,9 @@ const CreateJob = () => {
                     <input type="text" name="location" placeholder="Location" />
                     <input type="number" name="salary" placeholder="Salary" />
                     <input type="text" name="companyLogo" placeholder="Company Logo" />
-                    <textarea name="description" placeholder="Description" />
+                    <textarea name="companyDescription" placeholder="Company Description" />
+                    <textarea name="role" placeholder="Role Description" />
+                    <textarea name="requirements" placeholder="Requirements separated by new line" />
                     <input type="submit" className={styles.button} value="Submit" />
                 </form>
             </div>

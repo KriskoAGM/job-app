@@ -10,9 +10,6 @@ const Jobs = () => {
                     </h2>
                 </div>
                 <div className="job_container">
-                    <h4 className="job_heading">
-                        Recent Jobs
-                    </h4>
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="box">

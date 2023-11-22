@@ -9,6 +9,7 @@ import JobsList from './components/jobs/JobsList'
 import Info from './components/info/Info'
 import Footer from './components/footer/Footer'
 import CreateJob from './components/jobs/CreateJob'
+import JobDetails from './components/jobs/JobDetails'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/create" element={<CreateJob />} />
+        <Route path="/details/:id" element={<JobDetails />} />
       </Routes>
 
       <Info />

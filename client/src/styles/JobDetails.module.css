@@ -1,0 +1,55 @@
+.imgBox{
+    display: flex;
+    justify-content: center;
+    margin-block: 50px;
+}
+
+.imgBox img{
+    width: 90px;
+    height: 90px;
+    text-align: center;
+}
+
+.detailBox h5{
+    text-align: center;
+    font-size: 25px;
+}
+
+.detailInfo{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 35px;
+    margin-block: 30px;
+}
+
+.detailInfo span{
+    font-size: 20px;
+}
+
+.optionBox{
+    text-align: center;
+    margin-block: 50px;
+}
+
+.description {
+    padding-inline: 35px;
+}
+
+.applyBtn{
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #213092;
+    color: #ffffff;
+    border-radius: 5px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    border: 1px solid #213092;
+    outline: none;
+}
+
+.applyBtn:hover{
+    background-color: #09124c;
+    color: #ffffff;
+}
