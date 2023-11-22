@@ -39,7 +39,7 @@ const JobItem = ({
                     <button className="fav-btn">
                         <i className="fa fa-heart-o" aria-hidden="true"></i>
                     </button>
-                    <Link to="/details/:id" className="apply-btn">
+                    <Link to={`/details/${_id}`} className="apply-btn">
                         Details
                     </Link>
                 </div>
