@@ -14,6 +14,7 @@ import JobDetails from './components/jobs/JobDetails'
 function App() {
 
   return (
+
     <div>
 
       <Header />
@@ -32,6 +33,7 @@ function App() {
       <Footer />
 
     </div>
+
   )
 }
 
