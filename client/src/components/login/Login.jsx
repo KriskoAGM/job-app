@@ -1,17 +1,27 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+
+import useForm from "../../hooks/useForm";
+import AuthContext from "../../contexts/authContext";
 
 import styles from "../../styles/Forms.module.css";
 
 const Login = () => {
+    const { loginSubmitHandler } = useContext(AuthContext);
+    const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
+        email: '',
+        password: '',
+    });
+
     return (
         <div className={styles.container}>
             <div className={`${styles.login} ${styles.form}`}>
                 <header>Login</header>
-                <form action="#">
-                    <input type="text" placeholder="Enter your email" />
-                    <input type="password" placeholder="Enter your password" />
+                <form onSubmit={onSubmit}>
+                    <input type="text" name="email" placeholder="Enter your email" onChange={onChange} value={values.email} />
+                    <input type="password" name="password" placeholder="Enter your password" onChange={onChange} value={values.password} />
                     <a href="#">Forgot password?</a>
-                    <input type="button" className={styles.button} value="Login" />
+                    <input type="submit" className={styles.button} value="Login" />
                 </form>
                 <div className={styles.signup}>
                     <span className={styles.signup}>Don't have an account?

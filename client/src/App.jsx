@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 
+import { AuthProvider } from './contexts/authContext';
+
 import Header from './components/header/Header'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
@@ -15,24 +17,27 @@ function App() {
 
   return (
 
-    <div>
+    <AuthProvider>
+      <div>
 
-      <Header />
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<Jobs />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/jobs" element={<JobsList />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/create" element={<CreateJob />} />
-        <Route path="/details/:jobId" element={<JobDetails />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Jobs />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/jobs" element={<JobsList />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/create" element={<CreateJob />} />
+          <Route path="/details/:jobId" element={<JobDetails />} />
+        </Routes>
 
-      <Info />
-      <Footer />
+        <Info />
+        <Footer />
 
-    </div>
+      </div>
+    </AuthProvider>
+
 
   )
 }
