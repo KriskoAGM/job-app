@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import AuthContext from "../../contexts/authContext";
+
 const Header = () => {
+    const { isAuthenticated } = useContext(AuthContext);
+
     return (
         <header className="header_section">
             <div className="container-fluid">
@@ -22,11 +27,6 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav  ml-auto">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/create">
-                                    Post Job
-                                </Link>
-                            </li>
-                            <li className="nav-item">
                                 <Link className="nav-link" to="/">
                                     Home
                                 </Link>
@@ -42,18 +42,42 @@ const Header = () => {
                                     Jobs
                                 </Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/login">
-                                    <i className="fa fa-user" aria-hidden="true" />
-                                    <span>Login</span>
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/register">
-                                    <i className="fa fa-user" aria-hidden="true" />
-                                    <span>Sign Up</span>
-                                </Link>
-                            </li>
+                            {isAuthenticated && (
+                                <>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/create">
+                                            Post Job
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/">
+                                            Profile
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/">
+                                            Logout
+                                        </Link>
+                                    </li>
+                                </>
+                            )}
+
+                            {!isAuthenticated && (
+                                <>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/login">
+                                            <i className="fa fa-user" aria-hidden="true" />
+                                            <span>Login</span>
+                                        </Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/register">
+                                            <i className="fa fa-user" aria-hidden="true" />
+                                            <span>Sign Up</span>
+                                        </Link>
+                                    </li>
+                                </>
+                            )}
                         </ul>
                     </div>
                 </nav>

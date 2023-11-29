@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import * as authService from '../services/authService'
 
@@ -6,17 +7,20 @@ import * as authService from '../services/authService'
 const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
+    const navigate = useNavigate()
     const [ auth, setAuth ] = useState({})
 
     const loginSubmitHandler = async (values) => {
         const result = await authService.login(values.email, values.password);
 
         setAuth(result);
-        console.log(result);
+        navigate('/')
     };
 
     const values = {
         loginSubmitHandler,
+        email: auth.email,
+        isAuthenticated: !!auth.email,
     };
 
     return (
