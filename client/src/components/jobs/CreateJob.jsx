@@ -20,7 +20,7 @@ const CreateJob = () => {
     return (
         <div className={styles.container}>
             <div className={`${styles.create} ${styles.form}`}>
-                <header>Create</header>
+                <header>Post a job!</header>
                 <form onSubmit={onCreateHandler}>
                     <input type="text" name="title" placeholder="Title" />
                     <input type="text" name="location" placeholder="Location" />
