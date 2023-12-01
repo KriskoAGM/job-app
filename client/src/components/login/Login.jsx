@@ -6,11 +6,16 @@ import AuthContext from "../../contexts/authContext";
 
 import styles from "../../styles/Forms.module.css";
 
+const LoginFormKeys = {
+    Email: 'email',
+    Password: 'password',
+};
+
 const Login = () => {
     const { loginSubmitHandler } = useContext(AuthContext);
     const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
-        email: '',
-        password: '',
+        [LoginFormKeys.Email]: '',
+        [LoginFormKeys.Password]: '',
     });
 
     return (
@@ -18,8 +23,18 @@ const Login = () => {
             <div className={`${styles.login} ${styles.form}`}>
                 <header>Login</header>
                 <form onSubmit={onSubmit}>
-                    <input type="text" name="email" placeholder="Enter your email" onChange={onChange} value={values.email} />
-                    <input type="password" name="password" placeholder="Enter your password" onChange={onChange} value={values.password} />
+                    <input
+                        type="text"
+                        name={LoginFormKeys.Email}
+                        placeholder="Enter your email"
+                        onChange={onChange}
+                        value={values[LoginFormKeys.Email]} />
+                    <input
+                        type="password"
+                        name={LoginFormKeys.Password}
+                        placeholder="Enter your password"
+                        onChange={onChange}
+                        value={values[LoginFormKeys.Password]} />
                     <a href="#">Forgot password?</a>
                     <input type="submit" className={styles.button} value="Login" />
                 </form>
