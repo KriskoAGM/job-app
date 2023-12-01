@@ -5,6 +5,7 @@ import { AuthProvider } from './contexts/authContext';
 import Header from './components/header/Header'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
+import Logout from './components/logout/Logout'
 import About from './components/about/About'
 import Jobs from './components/jobs/Jobs'
 import JobsList from './components/jobs/JobsList'
@@ -28,6 +29,7 @@ function App() {
           <Route path="/jobs" element={<JobsList />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/logout" element={<Logout />} />
           <Route path="/create" element={<CreateJob />} />
           <Route path="/details/:jobId" element={<JobDetails />} />
         </Routes>

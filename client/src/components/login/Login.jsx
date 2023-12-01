@@ -36,7 +36,10 @@ const Login = () => {
                         onChange={onChange}
                         value={values[LoginFormKeys.Password]} />
                     <a href="#">Forgot password?</a>
-                    <input type="submit" className={styles.button} value="Login" />
+                    <input
+                        type="submit"
+                        className={styles.button}
+                        value="Login" />
                 </form>
                 <div className={styles.signup}>
                     <span className={styles.signup}>Don't have an account?

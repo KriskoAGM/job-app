@@ -43,3 +43,17 @@ export const register = async (email, username, password) => {
         console.log(err);
     };
 };
+
+export const logout = async () => {
+    try {
+        const token = localStorage.getItem('accessToken');
+        const response = await fetch(`${baseUrl}/logout`, {
+            method: 'GET',
+            headers: {
+                'X-Authorization': token,
+            },
+        })
+    } catch(err) {
+        console.log(err);
+    }
+};

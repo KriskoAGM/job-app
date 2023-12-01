@@ -43,15 +43,18 @@ const Register = () => {
                         type="password"
                         name={RegisterFormKeys.Password}
                         placeholder="Create a password"
-                        onChange={onChange} 
+                        onChange={onChange}
                         values={values[RegisterFormKeys.Password]} />
                     <input
                         type="password"
                         name={RegisterFormKeys.ConfirmPassword}
                         placeholder="Confirm your password"
-                        onChange={onChange} 
+                        onChange={onChange}
                         values={values[RegisterFormKeys.ConfirmPassword]} />
-                    <input type="submit" className={styles.button} value="Signup" />
+                    <input
+                        type="submit"
+                        className={styles.button}
+                        value="Signup" />
                 </form>
                 <div className={styles.signup}>
                     <span className={styles.signup}>Already have an account?
