@@ -6,11 +6,21 @@ import styles from "../../styles/Forms.module.css";
 
 const CreateJob = () => {
     const navigate = useNavigate();
+    const isNumber = (value) => {
+        const numericValue = parseFloat(value);
+        return !isNaN(numericValue) && isFinite(numericValue);
+      };
 
     const onCreateHandler = async (e) => {
         e.preventDefault();
 
         const jobData = Object.fromEntries(new FormData(e.currentTarget));
+
+        if (!isNumber(jobData.salary)) {
+            return;
+        }
+
+        jobData.salary = parseInt(jobData.salary);
 
         await jobService.create(jobData);
 
@@ -24,7 +34,7 @@ const CreateJob = () => {
                 <form onSubmit={onCreateHandler}>
                     <input type="text" name="title" placeholder="Title" />
                     <input type="text" name="location" placeholder="Location" />
-                    <input type="number" name="salary" placeholder="Salary" />
+                    <input type="text" name="salary" placeholder="Salary" />
                     <input type="text" name="companyLogo" placeholder="Company Logo" />
                     <textarea name="companyDescription" placeholder="Company Description" />
                     <textarea name="role" placeholder="Role Description" />

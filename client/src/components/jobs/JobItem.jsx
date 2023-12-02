@@ -6,6 +6,7 @@ const JobItem = ({
     location,
     salary,
     companyLogo,
+    likes,
 }) => {
 
     return (
@@ -37,6 +38,7 @@ const JobItem = ({
                 </div>
                 <div className="option-box">
                     <button className="fav-btn">
+                        <span className="likes-count">{likes}</span>
                         <i className="fa fa-heart-o" aria-hidden="true"></i>
                     </button>
                     <Link to={`/details/${_id}`} className="apply-btn">
