@@ -40,3 +40,24 @@ export const getOne = async (jobId) => {
         console.log(err)
     };
 };
+
+export const edit = async (jobId, jobData) => {
+    try {
+        const token = localStorage.getItem('accessToken');
+        const response = await fetch(`${baseUrl}${jobId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Authorization': token,
+            },
+            body: JSON.stringify(jobData),
+        })
+
+        const result = await response.json();
+
+        return result;
+
+    } catch (err) {
+        console.log(err)
+    }
+}

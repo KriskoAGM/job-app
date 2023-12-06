@@ -80,7 +80,7 @@ const JobDetails = () => {
             </div>
             {userId === jobDetails._ownerId && (
                 <div className={styles.buttons}>
-                    <a href="" className={styles.btn}>Edit</a>
+                    <Link to={`/details/${jobId}/edit`} className={styles.btn}>Edit</Link>
                     <a href="" className={styles.deleteBtn}>Delete</a>
                 </div>
             )}

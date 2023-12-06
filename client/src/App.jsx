@@ -13,6 +13,7 @@ import Info from './components/info/Info'
 import Footer from './components/footer/Footer'
 import CreateJob from './components/jobs/CreateJob'
 import JobDetails from './components/jobs/JobDetails'
+import EditJob from './components/jobs/EditJob';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/logout" element={<Logout />} />
           <Route path="/create" element={<CreateJob />} />
           <Route path="/details/:jobId" element={<JobDetails />} />
+          <Route path="/details/:jobId/edit" element={<EditJob />} />
         </Routes>
 
         <Info />
