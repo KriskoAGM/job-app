@@ -1,7 +1,8 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import * as authService from '../services/authService'
+
 
 
 const AuthContext = createContext();
@@ -32,13 +33,13 @@ export const AuthProvider = ({children}) => {
         localStorage.setItem('accessToken', result.accessToken);
 
         navigate('/');
-    }
+    };
 
     const logoutHandler = () => {
         setAuth({});
 
         localStorage.removeItem('accessToken');
-    }
+    };
 
     const values = {
         loginSubmitHandler,
@@ -47,6 +48,7 @@ export const AuthProvider = ({children}) => {
         username: auth.username,
         email: auth.email,
         isAuthenticated: !!auth.accessToken,
+        userId: auth._id,
     };
 
     return (

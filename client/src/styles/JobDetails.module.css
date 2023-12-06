@@ -35,7 +35,15 @@
     padding-inline: 35px;
 }
 
-.applyBtn{
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+
+.btn,
+.deleteBtn {
     display: inline-block;
     padding: 5px 15px;
     background-color: #213092;
@@ -49,7 +57,12 @@
     outline: none;
 }
 
-.applyBtn:hover{
+.deleteBtn {
+    background-color: red;
+    border: 1px solid red;
+}
+
+.btn:hover{
     background-color: #09124c;
     color: #ffffff;
 }

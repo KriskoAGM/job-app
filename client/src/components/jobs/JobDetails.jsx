@@ -1,13 +1,16 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
 import { Link } from "react-router-dom";
+
+import AuthContext from "../../contexts/authContext";
 
 import * as jobService from "../../services/jobService.js";
 
 import styles from "../../styles/JobDetails.module.css";
 
 const JobDetails = () => {
+    const { userId } = useContext(AuthContext);
     const { jobId } = useParams();
     const [jobDetails, setJobDetails] = useState({});
 
@@ -71,10 +74,16 @@ const JobDetails = () => {
                 </div>
             </div>
             <div className={styles.optionBox}>
-                <Link to="/" className={styles.applyBtn}>
+                <Link to="/" className={styles.btn}>
                     Apply Now
                 </Link>
             </div>
+            {userId === jobDetails._ownerId && (
+                <div className={styles.buttons}>
+                    <a href="" className={styles.btn}>Edit</a>
+                    <a href="" className={styles.deleteBtn}>Delete</a>
+                </div>
+            )}
         </div>
     )
 };

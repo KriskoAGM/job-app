@@ -4,7 +4,7 @@ import * as jobService from '../../services/jobService.js';
 
 import JobItem from './JobItem';
 
-const JobsPage = () => {
+const JobsList = () => {
     const [ jobs, setJobs ] = useState([]);
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const JobsPage = () => {
                     <div className="row">
 
                         {jobs.map(job => (
-                            <JobItem key={job._id} {...job} />
+                            <JobItem key={job._id} job={job} />
                         ))}
 
                     </div>
@@ -34,4 +34,4 @@ const JobsPage = () => {
     )
 };
 
-export default JobsPage;
+export default JobsList;

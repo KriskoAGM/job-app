@@ -2,7 +2,6 @@ const baseUrl = "http://localhost:3030/data/jobs/"
 
 export const create = async (jobData) => {
     try {
-        jobData.likes = 0;
         const token = localStorage.getItem('accessToken');
         const response = await fetch(baseUrl, {
             method: "POST",

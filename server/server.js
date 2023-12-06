@@ -1350,7 +1350,6 @@
                 companyDescription: "",
                 role: "",
                 requirements: "",
-                likes: 0,
                 _createdOn: 1701555143313,
                 _id: "4a281a17-a78e-4be0-acf4-2fd8e2a9d152"
             }
