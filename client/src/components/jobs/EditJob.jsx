@@ -8,7 +8,7 @@ import styles from "../../styles/Forms.module.css";
 const EditJob = () => {
     const navigate = useNavigate();
     const { jobId } = useParams();
-    const [ job, setJob ] = useState({
+    const [job, setJob] = useState({
         title: '',
         location: '',
         salary: '',
@@ -33,7 +33,7 @@ const EditJob = () => {
         try {
             await jobService.edit(jobId, values);
             navigate('/jobs');
-        } catch(err) {
+        } catch (err) {
             console.log(err)
         };
     };
@@ -50,13 +50,51 @@ const EditJob = () => {
             <div className={`${styles.create} ${styles.form}`}>
                 <header>Edit</header>
                 <form onSubmit={editJobSubmitHandler}>
-                    <input type="text" name="title" value={job.title} onChange={onChange} placeholder="Title" />
-                    <input type="text" name="location" value={job.location} onChange={onChange} placeholder="Location" />
-                    <input type="text" name="salary" value={job.salary} onChange={onChange} placeholder="Salary" />
-                    <input type="text" name="companyLogo" value={job.companyLogo} onChange={onChange} placeholder="Company Logo" />
-                    <textarea name="companyDescription" value={job.companyDescription} onChange={onChange} placeholder="Company Description" />
-                    <textarea name="role" value={job.role} onChange={onChange} placeholder="Role Description" />
-                    <textarea name="requirements" value={job.requirements} onChange={onChange} placeholder="Requirements separated by new line" />
+                    <input
+                        type="text"
+                        name="title"
+                        value={job.title}
+                        onChange={onChange}
+                        placeholder="Title"
+                    />
+                    <input
+                        type="text"
+                        name="location"
+                        value={job.location}
+                        onChange={onChange}
+                        placeholder="Location"
+                    />
+                    <input
+                        type="text"
+                        name="salary"
+                        value={job.salary}
+                        onChange={onChange}
+                        placeholder="Salary"
+                    />
+                    <input
+                        type="text"
+                        name="companyLogo"
+                        value={job.companyLogo}
+                        onChange={onChange}
+                        placeholder="Company Logo"
+                    />
+                    <textarea
+                        name="companyDescription"
+                        value={job.companyDescription}
+                        onChange={onChange}
+                        placeholder="Company Description"
+                    />
+                    <textarea
+                        name="role"
+                        value={job.role}
+                        onChange={onChange}
+                        placeholder="Role Description" />
+                    <textarea
+                        name="requirements"
+                        value={job.requirements}
+                        onChange={onChange}
+                        placeholder="Requirements separated by new line"
+                    />
                     <input type="submit" className={styles.button} value="Submit" />
                 </form>
             </div>

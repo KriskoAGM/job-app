@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     padding-inline: 35px;
-    margin-block: 30px;
+    margin-block: 10px;
 }
 
 .detailInfo span{
@@ -32,7 +32,10 @@
 }
 
 .description {
-    padding-inline: 35px;
+    padding: 35px;
+    background-color: rgb(0, 0, 68);;
+    color: #ffffff;
+    border-radius: 10px;
 }
 
 .buttons {
