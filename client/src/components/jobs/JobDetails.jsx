@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 
 import { Link } from "react-router-dom";
@@ -12,12 +12,24 @@ import styles from "../../styles/JobDetails.module.css";
 const JobDetails = () => {
     const { userId } = useContext(AuthContext);
     const { jobId } = useParams();
+    const navigate = useNavigate();
     const [jobDetails, setJobDetails] = useState({});
+
 
     useEffect(() => {
         jobService.getOne(jobId)
             .then(setJobDetails)
     }, [jobId])
+
+    const deleteButtonClickHandler = async () => {
+        const hasConfirmed = confirm('Do you want to delete this job offer');
+
+        if (hasConfirmed) {
+            await jobService.remove(jobId);
+
+            navigate('/jobs');
+        };
+    };
 
     return (
         <div className={styles.box}>
@@ -81,7 +93,7 @@ const JobDetails = () => {
             {userId === jobDetails._ownerId && (
                 <div className={styles.buttons}>
                     <Link to={`/details/${jobId}/edit`} className={styles.btn}>Edit</Link>
-                    <a href="" className={styles.deleteBtn}>Delete</a>
+                    <button className={styles.deleteBtn} onClick={deleteButtonClickHandler}>Delete</button>
                 </div>
             )}
         </div>

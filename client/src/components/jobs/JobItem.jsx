@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import AuthContext from "../../contexts/authContext";
+
 const JobItem = ({ job }) => {
+    const { isAuthenticated } = useContext(AuthContext);
 
     return (
         <div className="col-lg-6">
@@ -30,10 +34,12 @@ const JobItem = ({ job }) => {
                     </div>
                 </div>
                 <div className="option-box">
-                    <button className="fav-btn">
-                        <span>0</span>
-                        <i className="fa fa-heart-o" aria-hidden="true"></i>
-                    </button>
+                    {isAuthenticated && (
+                        <button className="fav-btn">
+                            <span>0</span>
+                            <i className="fa fa-heart-o" aria-hidden="true"></i>
+                        </button>
+                    )}
                     <Link to={`/details/${job._id}`} className="apply-btn">
                         Details
                     </Link>
