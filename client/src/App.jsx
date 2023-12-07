@@ -14,6 +14,7 @@ import Footer from './components/footer/Footer'
 import CreateJob from './components/jobs/CreateJob'
 import JobDetails from './components/jobs/JobDetails'
 import EditJob from './components/jobs/EditJob';
+import AuthGuard from './components/guards/AuthGuard';
 
 function App() {
 
@@ -30,10 +31,12 @@ function App() {
           <Route path="/jobs" element={<JobsList />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/logout" element={<Logout />} />
-          <Route path="/create" element={<CreateJob />} />
           <Route path="/details/:jobId" element={<JobDetails />} />
-          <Route path="/details/:jobId/edit" element={<EditJob />} />
+          <Route element={<AuthGuard />}>
+            <Route path="/details/:jobId/edit" element={<EditJob />} />
+            <Route path="/create" element={<CreateJob />} />
+            <Route path="/logout" element={<Logout />} />
+          </Route>
         </Routes>
 
         <Info />

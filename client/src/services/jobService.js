@@ -1,8 +1,8 @@
 const baseUrl = "http://localhost:3030/data/jobs/";
-const token = localStorage.getItem('accessToken');
 
 export const create = async (jobData) => {
     try {
+        const token = localStorage.getItem('accessToken');
         const response = await fetch(baseUrl, {
             method: "POST",
             headers: {
@@ -54,6 +54,7 @@ export const getLatest = async () => {
 
 export const edit = async (jobId, jobData) => {
     try {
+        const token = localStorage.getItem('accessToken');
         const response = await fetch(`${baseUrl}${jobId}`, {
             method: 'PUT',
             headers: {
@@ -74,6 +75,7 @@ export const edit = async (jobId, jobData) => {
 
 export const remove = async (jobId) => {
     try {
+        const token = localStorage.getItem('accessToken');
         const response = await fetch(`${baseUrl}${jobId}`, {
             method: 'DELETE',
             headers: {

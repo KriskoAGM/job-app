@@ -1345,13 +1345,37 @@
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
                 title: "Web developer",
                 location: "Remote",
-                salary: "1199",
+                salary: 1200,
                 companyLogo: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398",
                 companyDescription: "",
                 role: "",
                 requirements: "",
                 _createdOn: 1701555143313,
                 _id: "4a281a17-a78e-4be0-acf4-2fd8e2a9d152"
+            },
+            "70f63947-62f8-4ea7-804b-2ebc9cf18ee2": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Web developer",
+                location: "Vidin, Bulgaria",
+                salary: 1500,
+                companyLogo: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398",
+                companyDescription: "fsfdsafsdafsafasd",
+                role: "dfsfds",
+                requirements: "fdsfds\nfdsfghgh\nhgfhfg vc",
+                _createdOn: 1701948779374,
+                _id: "70f63947-62f8-4ea7-804b-2ebc9cf18ee2"
+            },
+            "8b91f12a-c052-4019-83e1-e79516eb4d56": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Junior back-end developer",
+                location: "Vidin, Bulgaria",
+                salary: 1500,
+                companyLogo: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398",
+                companyDescription: "fsfdsafsdafsafasd",
+                role: "dfsfds",
+                requirements: "fdsfds\nfdsfghgh\nhgfhfg vc",
+                _createdOn: 1701948798198,
+                _id: "8b91f12a-c052-4019-83e1-e79516eb4d56"
             }
         },
         recipes: {

@@ -1,5 +1,7 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+
+import * as favoriteService from "../../services/likesService.js";
 
 import AuthContext from "../../contexts/authContext";
 
@@ -37,7 +39,7 @@ const JobItem = ({ job }) => {
                     {isAuthenticated && (
                         <button className="fav-btn">
                             <span>0</span>
-                            <i className="fa fa-heart-o" aria-hidden="true"></i>
+                            <i className='fa fa-heart-o' aria-hidden="true"></i>
                         </button>
                     )}
                     <Link to={`/details/${job._id}`} className="apply-btn">
