@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 import useForm from "../../hooks/useForm";
@@ -15,12 +15,29 @@ const RegisterFormKeys = {
 
 const Register = () => {
     const { registerSubmitHandler } = useContext(AuthContext);
-    const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+
+    const validateForm = (values) => {
+        const errors = {};
+
+        // Check if password and confirm password match
+        if (values[RegisterFormKeys.Password] !== values[RegisterFormKeys.ConfirmPassword]) {
+            errors[RegisterFormKeys.ConfirmPassword] = 'Passwords do not match';
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(values[RegisterFormKeys.Email])) {
+            errors[RegisterFormKeys.Email] = 'Invalid email address';
+        }
+
+        return errors;
+    };
+
+    const { values, onChange, onSubmit, errors } = useForm(registerSubmitHandler, {
         [RegisterFormKeys.Email]: '',
         [RegisterFormKeys.Username]: '',
         [RegisterFormKeys.Password]: '',
         [RegisterFormKeys.ConfirmPassword]: ''
-    });
+    }, validateForm);
 
     return (
         <div className={styles.container}>
@@ -33,6 +50,9 @@ const Register = () => {
                         placeholder="Enter your email"
                         onChange={onChange}
                         values={values[RegisterFormKeys.Email]} />
+                    {errors[RegisterFormKeys.Email] && (
+                        <p className={styles.error}>{errors[RegisterFormKeys.Email]}</p>
+                    )}
                     <input
                         type="text"
                         name={RegisterFormKeys.Username}
@@ -51,6 +71,9 @@ const Register = () => {
                         placeholder="Confirm your password"
                         onChange={onChange}
                         values={values[RegisterFormKeys.ConfirmPassword]} />
+                    {errors[RegisterFormKeys.ConfirmPassword] && (
+                        <p className={styles.error}>{errors[RegisterFormKeys.ConfirmPassword]}</p>
+                    )}
                     <input
                         type="submit"
                         className={styles.button}

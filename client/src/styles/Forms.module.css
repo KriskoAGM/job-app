@@ -81,3 +81,7 @@
   .signup label:hover{
     text-decoration: underline;
   }
+
+  .error {
+    color: #e41a2b;
+  }

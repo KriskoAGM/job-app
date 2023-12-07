@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import useForm from "../../hooks/useForm";
@@ -12,7 +12,7 @@ const LoginFormKeys = {
 };
 
 const Login = () => {
-    const { loginSubmitHandler } = useContext(AuthContext);
+    const { loginSubmitHandler, error } = useContext(AuthContext);
     const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
         [LoginFormKeys.Email]: '',
         [LoginFormKeys.Password]: '',
@@ -35,6 +35,9 @@ const Login = () => {
                         placeholder="Enter your password"
                         onChange={onChange}
                         value={values[LoginFormKeys.Password]} />
+                    {error && (
+                        <p className={styles.error}>{error}</p>
+                    )}
                     <a href="#">Forgot password?</a>
                     <input
                         type="submit"

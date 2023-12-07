@@ -7,22 +7,34 @@ import * as authService from '../services/authService'
 
 const AuthContext = createContext();
 
-export const AuthProvider = ({children}) => {
-    const navigate = useNavigate()
-    const [ auth, setAuth ] = useState(() => {
+export const AuthProvider = ({ children }) => {
+    const navigate = useNavigate();
+    const [auth, setAuth] = useState(() => {
         localStorage.removeItem('accessToken');
 
         return {};
-    })
+    });
+
+    const [error, setError] = useState('');
 
     const loginSubmitHandler = async (values) => {
-        const result = await authService.login(values.email, values.password);
+        try {
+            const result = await authService.login(values.email, values.password);
+            
+            if (result.code) {
+                setError(result.message);
+                return;
+            }
 
-        setAuth(result);
+            setAuth(result);
+            setError('');
 
-        localStorage.setItem('accessToken', result.accessToken);
+            localStorage.setItem('accessToken', result.accessToken);
 
-        navigate('/');
+            navigate('/');
+        } catch(error) {
+            console.log(error);
+        }
     };
 
     const registerSubmitHandler = async (values) => {
@@ -45,6 +57,7 @@ export const AuthProvider = ({children}) => {
         loginSubmitHandler,
         registerSubmitHandler,
         logoutHandler,
+        error,
         username: auth.username,
         email: auth.email,
         isAuthenticated: !!auth.accessToken,
