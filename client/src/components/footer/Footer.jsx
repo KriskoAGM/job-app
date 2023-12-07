@@ -1,6 +1,8 @@
+import styles from './Footer.module.css';
+
 const Footer = () => {
     return (
-        <footer className="footer_section">
+        <footer className={styles.footerSection}>
             <div className="container">
                 <p>
                     &copy; <span id="displayYear"></span> All Rights Reserved By

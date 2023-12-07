@@ -773,97 +773,6 @@ a:focus {
   color: #e41a2b;
 }
 
-.expert_section .box {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #08135c;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 45px;
-}
-
-.expert_section .box .img-box {
-  width: 100%;
-}
-
-.expert_section .box .img-box img {
-  width: 100%;
-}
-
-.expert_section .box .detail-box {
-  width: 100%;
-  color: #ffffff;
-  padding: 25px 15px;
-}
-
-.expert_section .box .detail-box a {
-  color: inherit;
-  font-size: 18px;
-}
-
-.expert_section .box .detail-box .expert_position {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 10px 0;
-}
-
-.expert_section .box .detail-box .expert_rating {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 15px;
-}
-
-.expert_section .box .detail-box p {
-  margin-bottom: 0;
-}
-
-.expert_section .btn-box {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 45px;
-}
-
-.expert_section .btn-box a {
-  display: inline-block;
-  padding: 10px 45px;
-  background-color: #e41a2b;
-  color: #ffffff;
-  border-radius: 5px;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  -moz-transition: all .3s;
-  transition: all .3s;
-  border: 1px solid #e41a2b;
-  outline: none;
-}
-
-.expert_section .btn-box a:hover {
-  background-color: transparent;
-  color: #e41a2b;
-}
-
 /* blog section end */
 .blog_section .box {
   padding-bottom: 25px;
@@ -1065,23 +974,5 @@ a:focus {
 
 .info_section .info_social .social_container a:hover {
   color: #e41a2b;
-}
-
-/* footer section*/
-.footer_section {
-  position: relative;
-  background-color: #030d47;
-  text-align: center;
-}
-
-.footer_section p {
-  border-top: 1px solid #ffffff;
-  color: #ffffff;
-  padding: 25px 0;
-  margin: 0;
-}
-
-.footer_section p a {
-  color: inherit;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,17 @@
+/* footer section*/
+.footerSection {
+    position: relative;
+    background-color: #030d47;
+    text-align: center;
+  }
+  
+  .footerSection p {
+    border-top: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 25px 0;
+    margin: 0;
+  }
+  
+  .footerSection p a {
+    color: inherit;
+  }

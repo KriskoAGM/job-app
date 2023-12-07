@@ -7,7 +7,7 @@ import AuthContext from "../../contexts/authContext";
 
 import * as jobService from "../../services/jobService.js";
 
-import styles from "../../styles/JobDetails.module.css";
+import styles from "./JobDetails.module.css";
 
 const JobDetails = () => {
     const { userId } = useContext(AuthContext);
