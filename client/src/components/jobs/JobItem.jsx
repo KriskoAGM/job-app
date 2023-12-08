@@ -20,7 +20,6 @@ const JobItem = ({ job }) => {
 
                     // Filter favorites based on the current user's ID
                     const userFavorites = allFavorites.filter(favorite => favorite._ownerId === userId);
-                    console.log(userFavorites)
 
                     // Check if the job is in the user's favorites based on old_id
                     const isJobFavorite = userFavorites.some(favorite => favorite.old_id === job._id);
