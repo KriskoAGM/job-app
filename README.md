@@ -31,12 +31,18 @@ Welcome to JobHub, your go-to platform for exploring and posting IT job opportun
    cd job-app
 
 2. Install dependencies:
+   
+   ```bash	
    npm install
 
 3. Open a terminal for the client:
+
+   ```bash
    npm run dev
 
 4. Open a terminal for the server:
+
+   ```bash
    node server.js
 
 ## Contributing
