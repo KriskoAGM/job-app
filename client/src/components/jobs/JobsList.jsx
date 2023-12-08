@@ -12,6 +12,20 @@ const JobsList = () => {
             .then(data => setJobs(Object.values(data)));
     }, [])
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+
+        const handleScroll = () => {
+          window.scrollTo(0, 0);
+        };
+
+        window.addEventListener("popstate", handleScroll);
+    
+        return () => {
+          window.removeEventListener("popstate", handleScroll);
+        };
+      }, []);
+
     return (
         <section className="job_section layout_padding">
             <div className="container">

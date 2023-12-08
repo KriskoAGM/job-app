@@ -18,7 +18,7 @@ const Jobs = () => {
             <div className="container">
                 <div className="heading_container heading_center">
                     <h2>
-                        RECENT JOBS
+                        LATEST JOBS
                     </h2>
                 </div>
                 <div className="job_container">

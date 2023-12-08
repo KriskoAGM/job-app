@@ -41,6 +41,7 @@ export const AuthProvider = ({ children }) => {
         const result = await authService.register(values.email, values.username, values.password);
 
         setAuth(result);
+        setError('');
 
         localStorage.setItem('accessToken', result.accessToken);
 
@@ -53,10 +54,15 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem('accessToken');
     };
 
+    const applyButtonHandler = () => {
+        alert('You successfully applied for this job');
+    };
+
     const values = {
         loginSubmitHandler,
         registerSubmitHandler,
         logoutHandler,
+        applyButtonHandler,
         error,
         username: auth.username,
         email: auth.email,

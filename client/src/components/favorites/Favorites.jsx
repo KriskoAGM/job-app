@@ -38,11 +38,14 @@ const Favorites = () => {
                     </h2>
                 </div>
                 <div className="job_container">
-                    <div className="row">
-                        {favorites.map(job => (
-                            <FavoriteItem key={job._id} job={job} />
-                        ))}
-                    </div>
+                    {favorites.length === 0 && <h2 className="heading_container heading_center">No favorites yet</h2>}
+                    {favorites.length > 0 && (
+                        <div className="row">
+                            {favorites.map(job => (
+                                <FavoriteItem key={job._id} job={job} />
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

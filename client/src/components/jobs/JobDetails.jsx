@@ -10,7 +10,7 @@ import * as jobService from "../../services/jobService.js";
 import styles from "./JobDetails.module.css";
 
 const JobDetails = () => {
-    const { userId } = useContext(AuthContext);
+    const { userId, applyButtonHandler } = useContext(AuthContext);
     const { jobId } = useParams();
     const navigate = useNavigate();
     const [jobDetails, setJobDetails] = useState({});
@@ -86,9 +86,9 @@ const JobDetails = () => {
                 </div>
             </div>
             <div className={styles.optionBox}>
-                <Link to="/" className={styles.btn}>
+                <button className={styles.btn} onClick={applyButtonHandler}>
                     Apply Now
-                </Link>
+                </button>
             </div>
             {userId === jobDetails._ownerId && (
                 <div className={styles.buttons}>

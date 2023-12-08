@@ -1376,6 +1376,30 @@
                 requirements: "fdsfds\nfdsfghgh\nhgfhfg vc",
                 _createdOn: 1701948798198,
                 _id: "8b91f12a-c052-4019-83e1-e79516eb4d56"
+            },
+            "c5d2e280-1352-421a-a743-c6fc570d87c7": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "React Developer",
+                location: "Vidin, Bulgaria",
+                salary: 1700,
+                companyLogo: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398",
+                companyDescription: "sdadsadasdasdsa",
+                role: "cxzcxzcxzczx",
+                requirements: "javascript\nreact\nhtml & css",
+                _createdOn: 1702059801483,
+                _id: "c5d2e280-1352-421a-a743-c6fc570d87c7"
+            },
+            "4739b727-250a-4f5d-a0e5-dd98a1132026": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Senior react developer",
+                location: "Remote",
+                salary: 6000,
+                companyLogo: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/green-company-logo-design-template-e6cda0adebc58ba974fa4d2d02a14d1e_screen.jpg?ts=1567170398",
+                companyDescription: "fsdfdsfsd",
+                role: "fdsfsdfsd",
+                requirements: "3+ years of experience\nreactJS",
+                _createdOn: 1702059857000,
+                _id: "4739b727-250a-4f5d-a0e5-dd98a1132026"
             }
         },
         recipes: {

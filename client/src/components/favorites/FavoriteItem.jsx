@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 
+import AuthContext from "../../contexts/authContext.jsx";
+
 const FavoriteItem = ({ job }) => {
+    const { applyButtonHandler } = useContext(AuthContext);
 
     return (
         <div className="col-lg-6">
@@ -30,9 +34,9 @@ const FavoriteItem = ({ job }) => {
                     </div>
                 </div>
                 <div className="option-box">
-                    <Link to={`/details/${job.old_id}`} className="apply-btn">
-                        Details
-                    </Link>
+                    <button className="apply-btn" onClick={applyButtonHandler}>
+                        Apply
+                    </button>
                 </div>
             </div>
         </div>
