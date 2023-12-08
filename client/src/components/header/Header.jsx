@@ -11,7 +11,7 @@ const Header = () => {
             <div className="container-fluid">
                 <nav className="navbar navbar-expand-lg custom_nav-container ">
                     <Link className="navbar-brand" to="/">
-                        <span>Hirevac</span>
+                        <span>JobHub</span>
                     </Link>
                     <button
                         className="navbar-toggler"
