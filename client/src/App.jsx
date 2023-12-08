@@ -15,6 +15,7 @@ import CreateJob from './components/jobs/CreateJob'
 import JobDetails from './components/jobs/JobDetails'
 import EditJob from './components/jobs/EditJob';
 import AuthGuard from './components/guards/AuthGuard';
+import Favorites from './components/favorites/Favorites';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/details/:jobId" element={<JobDetails />} />
           <Route element={<AuthGuard />}>
             <Route path="/details/:jobId/edit" element={<EditJob />} />
+            <Route path="/favorites" element={<Favorites />} />
             <Route path="/create" element={<CreateJob />} />
             <Route path="/logout" element={<Logout />} />
           </Route>
