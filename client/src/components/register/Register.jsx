@@ -6,6 +6,8 @@ import AuthContext from "../../contexts/authContext";
 
 import styles from "../../styles/Forms.module.css";
 
+import { motion } from 'framer-motion';
+
 const RegisterFormKeys = {
     Email: 'email',
     Username: 'username',
@@ -40,7 +42,12 @@ const Register = () => {
     }, validateForm);
 
     return (
-        <div className={styles.container}>
+        <motion.div
+            className={styles.container}
+            initial={{ width: 0 }}
+            animate={{ width: '100%' }}
+            exit={{ x: window.innerWidth, transition: {duration: 0.1} }}
+        >
             <div className={`${styles.register} ${styles.form}`}>
                 <header>Signup</header>
                 <form onSubmit={onSubmit}>
@@ -85,7 +92,7 @@ const Register = () => {
                     </span>
                 </div>
             </div>
-        </div>
+        </motion.div>
 
     )
 };

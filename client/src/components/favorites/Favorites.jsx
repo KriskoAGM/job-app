@@ -6,6 +6,8 @@ import AuthContext from "../../contexts/authContext.jsx";
 
 import FavoriteItem from "../favorites/FavoriteItem";
 
+import { motion } from 'framer-motion';
+
 const Favorites = () => {
     const { userId } = useContext(AuthContext);
     const [favorites, setFavorites] = useState([]);
@@ -30,7 +32,12 @@ const Favorites = () => {
     }, [userId]);
 
     return (
-        <section className="job_section layout_padding">
+        <motion.div
+            className="job_section layout_padding"
+            initial={{ width: 0 }}
+            animate={{ width: '100%' }}
+            exit={{ x: window.innerWidth, transition: {duration: 0.1} }}
+        >
             <div className="container">
                 <div className="heading_container heading_center">
                     <h2>
@@ -48,7 +55,7 @@ const Favorites = () => {
                     )}
                 </div>
             </div>
-        </section>
+        </motion.div>
     )
 };
 

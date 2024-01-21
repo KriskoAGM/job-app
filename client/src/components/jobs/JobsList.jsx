@@ -4,8 +4,10 @@ import * as jobService from '../../services/jobService.js';
 
 import JobItem from './JobItem';
 
+import { motion } from 'framer-motion';
+
 const JobsList = () => {
-    const [ jobs, setJobs ] = useState([]);
+    const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
         jobService.getJobList()
@@ -16,18 +18,23 @@ const JobsList = () => {
         window.scrollTo(0, 0);
 
         const handleScroll = () => {
-          window.scrollTo(0, 0);
+            window.scrollTo(0, 0);
         };
 
         window.addEventListener("popstate", handleScroll);
-    
+
         return () => {
-          window.removeEventListener("popstate", handleScroll);
+            window.removeEventListener("popstate", handleScroll);
         };
-      }, []);
+    }, []);
 
     return (
-        <section className="job_section layout_padding">
+        <motion.div
+            className="job_section layout_padding"
+            initial={{ width: 0 }}
+            animate={{ width: '100%' }}
+            exit={{ x: window.innerWidth, transition: {duration: 0.1} }}
+        >
             <div className="container">
                 <div className="heading_container heading_center">
                     <h2>
@@ -44,7 +51,7 @@ const JobsList = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.div>
     )
 };
 

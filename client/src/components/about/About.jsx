@@ -1,6 +1,13 @@
+import { motion } from 'framer-motion';
+
 const About = () => {
     return (
-        <section className="about_section layout_padding">
+        <motion.div
+            className="about_section layout_padding"
+            initial={{ width: 0 }}
+            animate={{ width: '100%' }}
+            exit={{ x: window.innerWidth, transition: {duration: 0.1} }}
+        >
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
@@ -28,7 +35,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.div>
     )
 };
 

@@ -4,12 +4,14 @@ import * as jobService from '../../services/jobService.js'
 
 import styles from "../../styles/Forms.module.css";
 
+import { motion } from 'framer-motion';
+
 const CreateJob = () => {
     const navigate = useNavigate();
     const isNumber = (value) => {
         const numericValue = parseFloat(value);
         return !isNaN(numericValue) && isFinite(numericValue);
-      };
+    };
 
     const onCreateHandler = async (e) => {
         e.preventDefault();
@@ -28,7 +30,12 @@ const CreateJob = () => {
     }
 
     return (
-        <div className={styles.container}>
+        <motion.div
+            className={styles.container}
+            initial={{ width: 0 }}
+            animate={{ width: '100%' }}
+            exit={{ x: window.innerWidth, transition: {duration: 0.1}}}
+        >
             <div className={`${styles.create} ${styles.form}`}>
                 <header>Post a job!</header>
                 <form onSubmit={onCreateHandler}>
@@ -42,7 +49,7 @@ const CreateJob = () => {
                     <input type="submit" className={styles.button} value="Submit" />
                 </form>
             </div>
-        </div>
+        </motion.div>
     )
 };
 

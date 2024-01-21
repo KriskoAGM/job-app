@@ -5,6 +5,8 @@ import * as jobService from '../../services/jobService.js';
 
 import JobItem from './JobItem';
 
+import { motion } from 'framer-motion';
+
 const Jobs = () => {
     const [jobs, setJobs] = useState([]);
 
@@ -14,7 +16,12 @@ const Jobs = () => {
     }, []);
 
     return (
-        <section className="job_section layout_padding">
+        <motion.div
+            className="job_section layout_padding"
+            initial={{ width: 0 }}
+            animate={{ width: '100%' }}
+            exit={{ x: window.innerWidth, transition: {duration: 0.1} }}
+        >
             <div className="container">
                 <div className="heading_container heading_center">
                     <h2>
@@ -34,7 +41,7 @@ const Jobs = () => {
                     </Link>
                 </div>
             </div>
-        </section>
+        </motion.div>
     )
 };
 

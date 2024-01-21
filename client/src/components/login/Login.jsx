@@ -6,6 +6,8 @@ import AuthContext from "../../contexts/authContext";
 
 import styles from "../../styles/Forms.module.css";
 
+import { motion } from 'framer-motion';
+
 const LoginFormKeys = {
     Email: 'email',
     Password: 'password',
@@ -19,7 +21,12 @@ const Login = () => {
     });
 
     return (
-        <div className={styles.container}>
+        <motion.div
+            className={styles.container}
+            initial={{ width: 0 }}
+            animate={{ width: '100%' }}
+            exit={{ x: window.innerWidth, transition: {duration: 0.1} }}
+        >
             <div className={`${styles.login} ${styles.form}`}>
                 <header>Login</header>
                 <form onSubmit={onSubmit}>
@@ -50,7 +57,7 @@ const Login = () => {
                     </span>
                 </div>
             </div>
-        </div>
+        </motion.div>
 
     )
 };

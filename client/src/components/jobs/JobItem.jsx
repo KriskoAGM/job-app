@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import * as favoriteService from "../../services/favoritesService.js";
 
-import usePersistedState from "../../hooks/usePersistedState.js";
 import AuthContext from "../../contexts/authContext";
 
 const JobItem = ({ job }) => {
