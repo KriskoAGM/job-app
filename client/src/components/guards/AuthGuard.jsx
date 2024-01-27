@@ -7,7 +7,7 @@ export default function AuthGuard(props) {
 
     if (!isAuthenticated) {
         return <Navigate to="/login" />;
-    }
-
+    };
+    
     return <Outlet />;
 }
